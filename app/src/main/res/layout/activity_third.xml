@@ -6,4 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".ThirdActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toggle Button"
+        android:padding="10dp"
+        android:layout_margin="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20dp"
+        android:id="@+id/toggleButtontext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/toggleButton"/>
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/toggleButtontext"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switchText"
+        android:text="Switch"
+        android:textSize="20dp"
+        android:layout_margin="30dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/toggleButtontext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/switch_button"/>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch_button"
+        android:layout_margin="30dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
+    <Spinner
+        android:layout_width="250dp"
+        android:id="@+id/dropdownspinner"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/switch_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:entries="@array/country_array"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progBar"
+        android:visibility="invisible"
+        android:progress="@integer/material_motion_duration_short_2"
+        app:layout_constraintBottom_toTopOf="@id/buttonin3"
+        android:layout_margin="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/buttonin3"
+    android:backgroundTint="@color/black"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:textSize="20dp"
+    android:text="Next"
+    android:textColor="@color/white"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_margin="20dp"/>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
