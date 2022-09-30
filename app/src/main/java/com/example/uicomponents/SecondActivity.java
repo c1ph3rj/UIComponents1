@@ -2,6 +2,7 @@ package com.example.uicomponents;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,14 +25,22 @@ public class SecondActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                openNext();
             }
         });
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                openPrevious();
             }
         });
+    }
+    void openPrevious(){
+        Intent prev=new Intent(this,MainActivity.class);
+        startActivity(prev);
+    }
+    void openNext(){
+        Intent next=new Intent(this,ThirdActivity.class);
+        startActivity(next);
     }
 }
