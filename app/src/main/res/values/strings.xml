@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">UI Components</string>
+    <string name="activity2_heading"><![CDATA[Radio Buttons\n & Radio Group]]></string>
 </resources>
